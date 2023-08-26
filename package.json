@@ -1,0 +1,49 @@
+{
+  "name": "sdk-web",
+  "version": "1.0.6",
+  "description": "SDK for web typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "TVY",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist/ && tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint ./src/**/*.{js,jsx,ts,tsx} & pnpm lint-styles",
+    "lint-styles": "stylelint ./src/**/*.{css,scss} --allow-empty-input",
+    "test": "jest --passWithNoTests",
+    "prepare": "husky install",
+    "format-check": "prettier --config .prettierrc --check ./src/**/*.{js,jsx,ts,tsx}",
+    "format-write": "prettier --config .prettierrc --write ./src/**/*.{js,jsx,ts,tsx}"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@types/jest": "^29.5.1",
+    "@types/ua-parser-js": "^0.7.36",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^3.4.1",
+    "axios": "^1.4.0",
+    "clsx": "^2.0.0",
+    "http-status-codes": "^2.2.0",
+    "jsencrypt": "^3.3.2",
+    "lz-string": "^1.5.0",
+    "tailwind-merge": "^1.14.0",
+    "ua-parser-js": "^1.0.35"
+  }
+}
