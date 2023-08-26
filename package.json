@@ -1,6 +1,6 @@
 {
   "name": "sdkk-web",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "SDK for web typescript",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
