@@ -1,15 +1,19 @@
 {
   "name": "sdkk-web",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "SDK for web typescript",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
+  "sideEffects": false,
   "files": [
     "dist/**/*"
   ],
   "author": "TVY",
   "license": "MIT",
   "scripts": {
+    "build_tsup": "rm -rf dist && tsup --dts",
     "build": "rm -rf dist/ && tsc",
     "dev": "tsc --watch",
     "lint": "eslint ./src/**/*.{js,jsx,ts,tsx} & pnpm lint-styles",
@@ -34,6 +38,7 @@
     "stylelint": "^15.6.2",
     "stylelint-config-standard-scss": "^9.0.0",
     "ts-jest": "^29.1.0",
+    "tsup": "^7.2.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
